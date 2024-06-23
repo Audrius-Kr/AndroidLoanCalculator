@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="loan_amount">0000€</string>
+    <string name="loan_amount_label">Loan amount: </string>
+</resources>

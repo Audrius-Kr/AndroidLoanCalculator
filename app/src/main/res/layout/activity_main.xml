@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vertLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/horInputLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <TextView
+            android:id="@+id/loanAmountLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loan_amount_label" />
+        <EditText
+            android:layout_width="match_parent"
+            android:hint="@string/loan_amount"
+            android:layout_height="@dimen/input_field_height"
+            android:padding="@dimen/input_field_margin"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/vertInputLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Me" />
+
+</LinearLayout>
