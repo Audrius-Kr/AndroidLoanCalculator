@@ -1,39 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/vertLayout"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:padding="16dp">
 
     <LinearLayout
-        android:id="@+id/horInputLayout"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Loan Amount Section -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:id="@+id/loanAmountLabel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Loan amount"
+                android:textSize="16sp"
+                android:paddingEnd="8dp"/>
+            <EditText
+                android:id="@+id/loanAmountInput"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Enter amount"
+                android:inputType="numberDecimal"
+                android:padding="8dp"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Loan Term in Years Section -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:id="@+id/loanDurationLabel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Loan term in years"
+                android:textSize="16sp"
+                android:paddingEnd="8dp"/>
+            <EditText
+                android:id="@+id/loanDurationInput"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Enter years"
+                android:inputType="number"
+                android:padding="8dp"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Loan Term in Months Section -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:id="@+id/loanTermInMonthsLabel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Loan term in months"
+                android:textSize="16sp"
+                android:paddingEnd="8dp"/>
+            <EditText
+                android:id="@+id/loanTermInMonthsInput"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Enter months"
+                android:inputType="number"
+                android:padding="8dp"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Interest Rate Section -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:id="@+id/interestRateLabel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Interest rate per year"
+                android:textSize="16sp"
+                android:paddingEnd="8dp"/>
+            <EditText
+                android:id="@+id/interestRateInput"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Enter rate"
+                android:inputType="numberDecimal"
+                android:padding="8dp"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginStart="8dp"/>
+            <TextView
+                android:id="@+id/percentageSymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="%"
+                android:textSize="16sp"
+                android:paddingStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Calculate Button -->
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Results Section -->
         <TextView
-            android:id="@+id/loanAmountLabel"
+            android:id="@+id/monthlyPaymentLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/loan_amount_label" />
-        <EditText
+            android:text="Monthly payments"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/monthlyPaymentAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$93.22"
+            android:textSize="24sp"
+            android:textColor="@android:color/holo_blue_dark"/>
+
+        <TextView
+            android:id="@+id/totalPrincipalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total principal paid"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/totalPrincipalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$5,000"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/totalInterestLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total interest paid"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/totalInterestAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$592.91"
+            android:textSize="18sp"/>
+
+        <!-- Additional Button Section -->
+        <Button
+            android:id="@+id/compareRatesButton"
             android:layout_width="match_parent"
-            android:hint="@string/loan_amount"
-            android:layout_height="@dimen/input_field_height"
-            android:padding="@dimen/input_field_margin"/>
+            android:layout_height="wrap_content"
+            android:text="Compare loan rates"
+            android:background="@android:drawable/btn_default"
+            android:layout_marginTop="24dp"
+            android:padding="12dp"/>
+
+        <Button
+            android:id="@+id/amortizationScheduleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hide amortization schedule"
+            android:background="@android:drawable/btn_default"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"/>
+
     </LinearLayout>
-    
-    <LinearLayout
-        android:id="@+id/vertInputLayout"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Click Me" />
-
-</LinearLayout>
+</ScrollView>

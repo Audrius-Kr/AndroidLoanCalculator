@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="loan_amount">0000€</string>
+    <string name="loan_amount_hint">10000€</string>
     <string name="loan_amount_label">Loan amount: </string>
+    <string name="loan_duration_years_hint">10 </string>
+    <string name="loan_duration_label">Loan term in years: </string>
+    <string name="loan_interest_label">Interest rate per year: </string>
+    <string name="loan_interest_hint">5.5% </string>
+
+
+
 </resources>
