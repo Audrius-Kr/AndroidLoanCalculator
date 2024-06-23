@@ -1,6 +1,6 @@
 # Loan Repayment Calculator
 
-![UI screenshot]()
+![UI screenshot](./LoanCalculatorScreenshot.jpg)
 
 ## Overview
 
