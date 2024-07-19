@@ -21,7 +21,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Loan amount"
+                android:text="@string/loan_amount"
                 android:textSize="16sp"
                 android:paddingEnd="8dp"/>
             <EditText
@@ -29,13 +29,12 @@
                 android:layout_width="0dp"
                 android:layout_weight="2"
                 android:layout_height="wrap_content"
-                android:hint="Enter amount"
+                android:hint="@string/enter_amount"
                 android:inputType="numberDecimal"
                 android:padding="8dp"
                 android:background="@android:drawable/edit_text"
                 android:layout_marginStart="8dp"/>
         </LinearLayout>
-
         <!-- Loan Term in Years Section -->
         <LinearLayout
             android:orientation="horizontal"
@@ -47,7 +46,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Loan term in years"
+                android:text="@string/loan_term_in_years"
                 android:textSize="16sp"
                 android:paddingEnd="8dp"/>
             <EditText
@@ -55,7 +54,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="2"
                 android:layout_height="wrap_content"
-                android:hint="Enter years"
+                android:hint="@string/enter_years"
                 android:inputType="number"
                 android:padding="8dp"
                 android:background="@android:drawable/edit_text"
@@ -73,7 +72,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Loan term in months"
+                android:text="@string/loan_term_in_months"
                 android:textSize="16sp"
                 android:paddingEnd="8dp"/>
             <EditText
@@ -81,12 +80,13 @@
                 android:layout_width="0dp"
                 android:layout_weight="2"
                 android:layout_height="wrap_content"
-                android:hint="Enter months"
+                android:hint="@string/enter_months"
                 android:inputType="number"
                 android:padding="8dp"
                 android:background="@android:drawable/edit_text"
                 android:layout_marginStart="8dp"/>
         </LinearLayout>
+
 
         <!-- Interest Rate Section -->
         <LinearLayout
@@ -99,7 +99,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Interest rate per year"
+                android:text="@string/interest_rate_per_year"
                 android:textSize="16sp"
                 android:paddingEnd="8dp"/>
             <EditText
@@ -107,7 +107,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="2"
                 android:layout_height="wrap_content"
-                android:hint="Enter rate"
+                android:hint="@string/enter_rate"
                 android:inputType="numberDecimal"
                 android:padding="8dp"
                 android:background="@android:drawable/edit_text"
@@ -117,9 +117,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="%"
+                android:text="@string/interest_percent"
                 android:textSize="16sp"
                 android:paddingStart="8dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:choiceMode="multipleChoice"/>
         </LinearLayout>
 
         <!-- Calculate Button -->
@@ -127,7 +137,7 @@
             android:id="@+id/calculateButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Calculate"
+            android:text="@string/calculate"
             android:background="@color/colorPrimary"
             android:textColor="@android:color/white"
             android:padding="12dp"
@@ -138,7 +148,7 @@
             android:id="@+id/monthlyPaymentLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Monthly payments"
+            android:text="@string/monthly_payments"
             android:textSize="16sp"
             android:layout_marginTop="16dp"/>
         <TextView
@@ -150,14 +160,14 @@
             android:textColor="@android:color/holo_blue_dark"/>
 
         <TextView
-            android:id="@+id/totalPrincipalLabel"
+            android:id="@+id/totalLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total principal paid"
+            android:text="@string/total_paid"
             android:textSize="16sp"
             android:layout_marginTop="16dp"/>
         <TextView
-            android:id="@+id/totalPrincipalAmount"
+            android:id="@+id/totalAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="$5,000"
@@ -167,7 +177,7 @@
             android:id="@+id/totalInterestLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total interest paid"
+            android:text="@string/total_interest_paid"
             android:textSize="16sp"
             android:layout_marginTop="16dp"/>
         <TextView
@@ -182,7 +192,7 @@
             android:id="@+id/compareRatesButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Compare loan rates"
+            android:text="@string/compare_loan_rates"
             android:background="@android:drawable/btn_default"
             android:layout_marginTop="24dp"
             android:padding="12dp"/>
@@ -191,7 +201,7 @@
             android:id="@+id/amortizationScheduleButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hide amortization schedule"
+            android:text="@string/hide_amortization_schedule"
             android:background="@android:drawable/btn_default"
             android:layout_marginTop="16dp"
             android:padding="12dp"/>
